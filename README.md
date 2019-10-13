@@ -1,5 +1,4 @@
 # simple_chrome_main
----
 
 ## Title
 > VanillaJS로 구현하는 크롬 메인 페이지
