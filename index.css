@@ -83,3 +83,9 @@ body {
 ul {
   list-style-type: none;
 }
+
+.refresh {
+  width: 2%;
+  margin-left: 1%;
+  cursor: pointer;
+}
