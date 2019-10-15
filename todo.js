@@ -9,6 +9,8 @@ const TODO_LI = 'li-todo';
 
 let toDos = [];
 
+let toDoIndex = 0; // index를 겹치지 않게 사용하려는 용도
+
 function deleteToDo(event) {
   // console.log(event);
   const btn = event.target;
@@ -30,7 +32,8 @@ function paintToDo(text) {
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
   const span = document.createElement("span");
-  const newId = toDos.length + 1;
+  toDoIndex += 1;
+  const newId = toDoIndex;
   delBtn.innerText = "❌";
   delBtn.addEventListener("click", deleteToDo);
   delBtn.classList.add(DEL_BTN);
@@ -66,6 +69,7 @@ function loadToDos() {
     parsedToDos.forEach(toDo => {
       paintToDo(toDo.text);
     });
+    toDoIndex = parsedToDos.length;
   }
 }
 
