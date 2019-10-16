@@ -10,6 +10,7 @@ function getWeather(lat, lng) {
   ).then(function(response) {
     return response.json();
   }).then(function(json) {
+    refresh.classList.remove("active");
     const temperature = json.main.temp;
     const place = json.name;
     weather.innerText = `${temperature} ℃ @ ${place}`;
@@ -23,6 +24,9 @@ function saveCoords(coordsObj) {
 
 function handleGeoSuccess(position) {
   // console.log(position);
+  // ## refresh spin
+  refresh.classList.add("active");
+
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 

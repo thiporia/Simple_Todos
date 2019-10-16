@@ -1,39 +1,96 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta property="og:title" content="Sseon-Todos" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="http://todo.sseon.me" />
-      <meta property="og:image" content="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
-      <meta property="og:description" content="I hope you are well." />
+    <meta property="og:title" content="Sseon-Todos" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://todo.sseon.me" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+    />
+    <meta property="og:description" content="I hope you are well." />
     <meta charset="utf-8" />
     <title>SSEON-Todos!</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="top">
       <span class="js-weather weahter"></span>
       <span>
-          <img 
-            class="js-refresh refresh" 
-            src="./icon/refresh_white.png" 
-            alt="refresh location icon"
-            title="Do you want refresh location? Click!"
-          />
-        </span>
+        <img
+          class="js-refresh refresh"
+          src="./icon/refresh_white.png"
+          alt="refresh location icon"
+          title="Do you want refresh location? Click!"
+        />
+      </span>
     </div>
     <div class="contents">
       <div class="js-clock clock">
         <h1>00:00:00</h1>
       </div>
       <form class="js-form form">
-          <input type="text" class="inp" placeholder="What is your name?" />
+        <input type="text" class="inp" placeholder="What is your name?" />
       </form>
       <h4 class="js-greetings greetings"></h4>
       <form class="js-toDoForm">
         <input type="text" class="inp" placeholder="Write are todo" />
       </form>
-      <ul class="js-toDoList">
+      <ul class="js-toDoList"></ul>
+    </div>
+    <!-- Seach navigation -->
+    <div class="js-nav nav">
+      <ul>
+        <li class="nav__column-link">
+          <!-- google -->
+          <a
+            href="https://google.com"
+            class="nav__column-link-google"
+            target="_blank"
+          >
+            Google
+          </a>
+        </li>
+        <li class="nav__column-link">
+          <!-- daum -->
+          <a
+            href="https://daum.net"
+            class="nav__column-link-daum"
+            target="_blank"
+          >
+            Daum
+          </a>
+        </li>
+        <li class="nav__column-link">
+          <!-- naver -->
+          <a
+            href="https://naver.com"
+            target="_blank"
+            class="nav__column-link-naver"
+          >
+            Naver
+          </a>
+        </li>
+        <li class="nav__column-link">
+          <a
+            href="https://zum.com"
+            class="nav__column-link-zum"
+            target="_blank"
+          >
+            Zum
+          </a>
+        </li>
+        <li class="nav__column-link">
+          <a href="#" class="nav__column-top">
+            <i class="fas fa-chevron-circle-up"></i>
+          </a>
+        </li>
       </ul>
     </div>
     <script src="clock.js"></script>
@@ -41,5 +98,6 @@
     <script src="todo.js"></script>
     <script src="bg.js"></script>
     <script src="weather.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>
