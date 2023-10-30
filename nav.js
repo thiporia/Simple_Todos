@@ -1,7 +1,5 @@
-const nav = document.querySelector(".js-nav");
-
-console.log(nav);
+const nav = document.querySelector('.js-nav')
 
 function init() {}
 
-init();
+init()
